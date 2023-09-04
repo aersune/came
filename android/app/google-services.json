@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "269729200052",
+    "project_id": "enterexit-a9f2f",
+    "storage_bucket": "enterexit-a9f2f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:269729200052:android:9cd044aa7d033dd0f7e4e1",
+        "android_client_info": {
+          "package_name": "com.example.came"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "269729200052-m91ta1bkasa6o8msbtrhugg3pt4gjiqs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDl5cs-JxTH4UcURDe6L5Omunc31h-M5Lg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "269729200052-m91ta1bkasa6o8msbtrhugg3pt4gjiqs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
