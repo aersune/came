@@ -10,6 +10,8 @@ class CameProvider with ChangeNotifier{
 
 
 
+
+
   String? currentUserMail = FirebaseAuth.instance.currentUser?.email;
   var currentUser = FirebaseAuth.instance.currentUser;
 

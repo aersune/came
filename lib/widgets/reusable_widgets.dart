@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 TextField reusableTextField(String text, IconData icon, bool isPasswordType, TextEditingController controller) {
   return TextField(
     controller: controller,
@@ -8,6 +9,17 @@ TextField reusableTextField(String text, IconData icon, bool isPasswordType, Tex
     cursorColor: Colors.white,
     style: TextStyle(color: Colors.white.withOpacity(0.9)),
     decoration: InputDecoration(prefixIcon: Icon(icon,color: Colors.white70,),
+
+TextFormField reusableTextField(String text, IconData icon, bool isPasswordType, TextEditingController controller) {
+  return TextFormField(
+    controller: controller,
+    obscureText: isPasswordType,
+    enableSuggestions: !isPasswordType,
+    maxLines: 1,
+    cursorColor: Colors.white,
+    style: TextStyle(color: Colors.white.withOpacity(0.9)),
+    decoration: InputDecoration(prefixIcon: Icon(icon,color: Colors.white70,),
+    contentPadding: EdgeInsets.symmetric(horizontal: 30),
     labelText: text,
       labelStyle: TextStyle(color: Colors.white.withOpacity(0.9)),
       filled: true,
@@ -16,7 +28,6 @@ TextField reusableTextField(String text, IconData icon, bool isPasswordType, Tex
       border: OutlineInputBorder(borderRadius: BorderRadius.circular(30.0), borderSide: BorderSide(width: 0,style: BorderStyle.none)),
     ),
     keyboardType: isPasswordType ? TextInputType.visiblePassword : TextInputType.emailAddress,
-
   );
 }
 
@@ -30,7 +41,11 @@ Container signInSignUpButton(BuildContext context, bool isLogin, Function onTap)
     ),
     child: ElevatedButton(onPressed: (){
       onTap();
+
     }, child: Text(isLogin ? 'LOG IN' : 'SIGN UP', style: TextStyle(
+
+    }, child: Text(isLogin ? 'Вход' : 'Регистрация', style: TextStyle(
+
       color: Colors.black87,
       fontWeight: FontWeight.bold,
       fontSize: 16,

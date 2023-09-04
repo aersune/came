@@ -1,6 +1,7 @@
 import 'package:came/home_page.dart';
 import 'package:came/methods/provider.dart';
 import 'package:came/pages/login_page.dart';
+import 'package:came/pages/login_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +36,12 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               primarySwatch: Colors.blue,
             ),
-            home: FirebaseAuth.instance.currentUser != null ? HomePage() : LoginPage()
+
+            // home: FirebaseAuth.instance.currentUser != null ? HomePage() : LoginPage()
+
+            home: HomePage(),
+            // home: FirebaseAuth.instance.currentUser != null ? HomePage() : LoginScreen()
+
 
         );
       },

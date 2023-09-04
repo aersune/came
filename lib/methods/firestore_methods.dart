@@ -14,8 +14,10 @@ class FirestoreMethods{
 
 
 
-
   DatabaseReference ref = FirebaseDatabase.instance.ref("users/123");
+
+
+
 
 
 
@@ -35,13 +37,26 @@ class FirestoreMethods{
     });
   }
 
+  void addEnter(ref2,String enter,) async {
+
+    await ref2.set({
+      "enter": enter,
+    });
+  }
+
+  void addExit(ref2,String exit) async {
+
+    await ref2.set({
+      "exit": exit,
+    });
+  }
+
   void addData(ref2,String enter,String exit) async {
 
     await ref2.set({
       "enter": enter,
-      "exit": exit,
     });
-
+    }
 
 
     // int length = 0;
@@ -64,10 +79,6 @@ class FirestoreMethods{
     // db.collection("cities").add(data).then((documentSnapshot) =>
     //     print("Added Data with ID: ${documentSnapshot.id}"));
 
-
-
-  }
-
   void updateData() async {
     await ref.update({"age": 19});
   }
@@ -76,3 +87,7 @@ class FirestoreMethods{
     firebaseFirestore.collection(_collectionName).doc(id).delete();
   }
 }
+
+
+
+
