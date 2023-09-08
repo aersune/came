@@ -39,9 +39,6 @@ class _CamePageState extends State<CamePage> {
     }
 
 
-
-
-
     return Scaffold(
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.end,
@@ -49,33 +46,35 @@ class _CamePageState extends State<CamePage> {
           InkWell(
             onTap: () {
               setState(() {
+
+
                 isCome = !isCome;
-                if(_userEnter == null){
-                  _userEnter = thisTime;
-                  print(_userEnter);
-                } else if(_userEnter.runtimeType == DateTime && _userExit == null){
-                  _userExit = thisTime;
-                  print('$_userEnter ---- $_userExit');
-                }
-                else if(_userEnter.runtimeType == DateTime &&  _userExit.runtimeType == DateTime){
-
-                  _userEnter = null;
-                  _userExit = null;
-                  print('$_userEnter ---- $_userExit');
-                }
-
-
-
-
-                if (currentCome.length <= 2) {
-                  currentCome.add(thisTime);
-                }
-                if (currentCome.length == 2) {
-                  userCome.add(UserDate(
-                      userEnter: currentCome[0], userExit: currentCome[1]));
-                  firestoreMedhods.addData(ref, _userEnter.toString(), _userExit.toString());
-                  currentCome.clear();
-                }
+                // if(_userEnter == null){
+                //   _userEnter = thisTime;
+                //   print(_userEnter);
+                // } else if(_userEnter.runtimeType == DateTime && _userExit == null){
+                //   _userExit = thisTime;
+                //   print('$_userEnter ---- $_userExit');
+                // }
+                // else if(_userEnter.runtimeType == DateTime &&  _userExit.runtimeType == DateTime){
+                //
+                //   _userEnter = null;
+                //   _userExit = null;
+                //   print('$_userEnter ---- $_userExit');
+                // }
+                //
+                //
+                //
+                //
+                // if (currentCome.length <= 2) {
+                //   currentCome.add(thisTime);
+                // }
+                // if (currentCome.length == 2) {
+                //   userCome.add(UserDate(
+                //       userEnter: currentCome[0], userExit: currentCome[1]));
+                //   firestoreMedhods.addData(ref, _userEnter.toString(), _userExit.toString());
+                //   currentCome.clear();
+                // }
               });
             },
             child: Container(
